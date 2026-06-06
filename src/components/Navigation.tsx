@@ -87,11 +87,11 @@ const Navigation: React.FC = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
-            <div className="w-8 h-8 bg-ocean-gradient rounded-lg flex items-center justify-center shadow-glow-ocean-sm flex-shrink-0">
-              <span className="text-white font-bold text-lg">T</span>
+            <div className="w-8 h-8 bg-ocean-gradient rounded-lg overflow-hidden shadow-glow-ocean-sm flex-shrink-0">
+              <img src="/avatar.png" alt="FALCON" className="w-full h-full object-cover" />
             </div>
             <span className="font-display font-bold text-sm lg:text-base text-white hidden md:block truncate max-w-[120px] lg:max-w-none">
-              {t('nameShort')}
+              FALCON
             </span>
           </motion.button>
 
