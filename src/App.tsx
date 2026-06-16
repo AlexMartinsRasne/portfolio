@@ -1,18 +1,18 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense, lazy } from 'react'
 import { Toaster } from 'react-hot-toast'
 
 // Components
 import AmbientBackground from './components/AmbientBackground'
 import CursorTrail from './components/CursorTrail'
 import Navigation from './components/Navigation'
-import Home from './pages/Home'
-import About from './pages/About'
-import Experience from './pages/Experience'
-import Projects from './pages/Projects'
-import Skills from './pages/Skills'
-import Achievements from './pages/Achievements'
-import Testimonials from './pages/Testimonials'
-import Contact from './pages/Contact'
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Experience = lazy(() => import('./pages/Experience'))
+const Projects = lazy(() => import('./pages/Projects'))
+const Skills = lazy(() => import('./pages/Skills'))
+const Achievements = lazy(() => import('./pages/Achievements'))
+const Testimonials = lazy(() => import('./pages/Testimonials'))
+const Contact = lazy(() => import('./pages/Contact'))
 import Footer from './components/Footer'
 
 // Context
@@ -44,30 +44,32 @@ function App() {
         <Navigation />
         
         <main className="relative z-10 overflow-x-hidden">
-          <section id="home">
-            <Home />
-          </section>
-          <section id="about">
-            <About />
-          </section>
-          <section id="experience">
-            <Experience />
-          </section>
-          <section id="projects">
-            <Projects />
-          </section>
-          <section id="skills">
-            <Skills />
-          </section>
-          <section id="achievements">
-            <Achievements />
-          </section>
-          <section id="testimonials">
-            <Testimonials />
-          </section>
-          <section id="contact">
-            <Contact />
-          </section>
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <section id="home">
+              <Home />
+            </section>
+            <section id="about">
+              <About />
+            </section>
+            <section id="experience">
+              <Experience />
+            </section>
+            <section id="projects">
+              <Projects />
+            </section>
+            <section id="skills">
+              <Skills />
+            </section>
+            <section id="achievements">
+              <Achievements />
+            </section>
+            <section id="testimonials">
+              <Testimonials />
+            </section>
+            <section id="contact">
+              <Contact />
+            </section>
+          </Suspense>
         </main>
         
         <Footer />
