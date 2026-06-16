@@ -1,4 +1,5 @@
 import React from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -14,6 +15,11 @@ import {
 } from 'lucide-react'
 
 const About: React.FC = () => {
+  useSEO({
+    title: 'About — FALCON | Full-Stack Software Engineer',
+    description: 'Learn about FALCON\'s background, expertise in React, TypeScript, Node.js, microservices architecture, and approach to building elegant software solutions',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/about'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const data = loadPortfolioData()

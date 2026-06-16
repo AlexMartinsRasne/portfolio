@@ -1,4 +1,5 @@
 import React from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -8,6 +9,11 @@ import { fadeUp, staggerContainer, defaultViewport } from '../utils/animations'
 import { Star, Quote, ExternalLink, Calendar, MapPin } from 'lucide-react'
 
 const Testimonials: React.FC = () => {
+  useSEO({
+    title: 'Testimonials — FALCON | Client Reviews',
+    description: 'Client testimonials and reviews for FALCON\'s work in full-stack development, React engineering, and collaborative projects',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/testimonials'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const data = loadPortfolioData()

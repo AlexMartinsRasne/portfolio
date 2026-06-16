@@ -21,9 +21,9 @@ import {
 
 const Projects: React.FC = () => {
   useSEO({
-    title: 'Projects — FALCON Portfolio',
-    description: 'Portfolio projects showcasing web, mobile and cloud work by FALCON',
-    canonical: 'REPLACE_WITH_PRIMARY_URL/projects'
+    title: 'Portfolio Projects — FALCON | Web, Mobile & Cloud',
+    description: 'Showcase of full-stack projects by FALCON: React web apps, Node.js backends, microservices, and cloud-native solutions',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/projects'
   })
   const { language } = useLanguage()
   const t = useUIText(language)

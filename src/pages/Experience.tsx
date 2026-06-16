@@ -1,4 +1,5 @@
 import React from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -8,6 +9,11 @@ import { fadeUp, staggerContainer, defaultViewport } from '../utils/animations'
 import { Calendar, MapPin, Award, TrendingUp } from 'lucide-react'
 
 const Experience: React.FC = () => {
+  useSEO({
+    title: 'Experience — FALCON | Professional Work History',
+    description: 'Professional experience in full-stack development, React engineering, microservices, cloud architecture, and technical leadership',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/experience'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const data = loadPortfolioData()

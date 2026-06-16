@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace REPLACE_WITH_PRIMARY_URL with your site root (include trailing slash) -->
   <url>
-    <loc>REPLACE_WITH_PRIMARY_URL</loc>
+    <loc>https://portfolio.falconxxx475.workers.dev/</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>REPLACE_WITH_PRIMARY_URL/about</loc>
+    <loc>https://portfolio.falconxxx475.workers.dev/about</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>REPLACE_WITH_PRIMARY_URL/projects</loc>
+    <loc>https://portfolio.falconxxx475.workers.dev/projects</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>REPLACE_WITH_PRIMARY_URL/contact</loc>
+    <loc>https://portfolio.falconxxx475.workers.dev/contact</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>REPLACE_WITH_PRIMARY_URL/blog</loc>
+    <loc>https://portfolio.falconxxx475.workers.dev/blog</loc>
     <lastmod>2026-06-16</lastmod>
     <priority>0.64</priority>
   </url>

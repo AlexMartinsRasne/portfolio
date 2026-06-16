@@ -1,4 +1,5 @@
 import React from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -17,6 +18,11 @@ import {
 } from 'lucide-react'
 
 const Skills: React.FC = () => {
+  useSEO({
+    title: 'Skills — FALCON | Technical Expertise',
+    description: 'Technical skills in React, TypeScript, Node.js, Python, cloud architecture, microservices, and modern web technologies',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/skills'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const data = loadPortfolioData()

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -7,6 +8,11 @@ import { Photo } from '../types/portfolio'
 import { X, Heart, Eye, MapPin, Calendar, Camera, Settings, ExternalLink } from 'lucide-react'
 
 const Gallery: React.FC = () => {
+  useSEO({
+    title: 'Gallery — FALCON | Photography & Visual Work',
+    description: 'Visual gallery showcasing photography, design work, and creative projects by FALCON',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/gallery'
+  })
   const { language } = useLanguage()
   const data = loadPortfolioData()
   const galleryData = data.gallery

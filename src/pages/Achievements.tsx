@@ -1,4 +1,5 @@
 import React from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -8,6 +9,11 @@ import { fadeUp, staggerContainer, defaultViewport } from '../utils/animations'
 import { Award, Calendar, ExternalLink, Star } from 'lucide-react'
 
 const Achievements: React.FC = () => {
+  useSEO({
+    title: 'Achievements — FALCON | Awards & Certifications',
+    description: 'Achievements, awards, and certifications earned by FALCON in software engineering, cloud architecture, and full-stack development',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/achievements'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const data = loadPortfolioData()

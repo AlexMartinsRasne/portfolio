@@ -1,7 +1,7 @@
 # robots.txt
-# Allow all user agents by default. Update sitemap URL after replacing placeholder.
+# Allow all user agents by default
 User-agent: *
 Allow: /
 
-# Point to the sitemap (replace the placeholder with your primary URL)
-Sitemap: REPLACE_WITH_PRIMARY_URL/sitemap.xml
+# Point to the sitemap
+Sitemap: https://portfolio.falconxxx475.workers.dev/sitemap.xml

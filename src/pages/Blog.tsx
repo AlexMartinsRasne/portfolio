@@ -1,4 +1,5 @@
 import React from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -6,6 +7,11 @@ import { loadPortfolioData, getLocalizedText, getLocalizedArray } from '../utils
 import { Calendar, Clock, Eye, Heart, MessageCircle, ExternalLink, Tag } from 'lucide-react'
 
 const Blog: React.FC = () => {
+  useSEO({
+    title: 'Blog — FALCON | Web Development & Engineering Insights',
+    description: 'Articles and insights on React, TypeScript, Node.js, full-stack development, and best practices in modern web engineering',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/blog'
+  })
   const { language } = useLanguage()
   const data = loadPortfolioData()
   const blogData = data.blog

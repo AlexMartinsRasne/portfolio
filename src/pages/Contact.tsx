@@ -23,9 +23,9 @@ import toast from 'react-hot-toast'
 
 const Contact: React.FC = () => {
   useSEO({
-    title: 'Contact — FALCON Portfolio',
-    description: 'Get in touch with FALCON for projects, collaborations, and consulting',
-    canonical: 'REPLACE_WITH_PRIMARY_URL/contact'
+    title: 'Contact — Get in Touch with FALCON',
+    description: 'Contact FALCON for freelance projects, collaborations, consulting, and full-stack development opportunities',
+    canonical: 'https://portfolio.falconxxx475.workers.dev/contact'
   })
   const { language } = useLanguage()
   const t = useUIText(language)
