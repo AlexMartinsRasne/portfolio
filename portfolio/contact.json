@@ -182,8 +182,8 @@
   },
   "contact_info": {
     "email": {
-      "address": "tatsuyakuroda60@gmail.com",
-      "japanese_address": "tatsuyakuroda60@gmail.com",
+      "address": "falconxxx475@gmail.com",
+      "japanese_address": "falconxxx475@gmail.com",
       "label": "Email",
       "japanese_label": "メール",
       "description": "For project inquiries and general questions",
@@ -191,12 +191,12 @@
       "icon": "mail"
     },
     "phone": {
-      "number": "+81 35-472-8961",
-      "japanese_number": "090-1234-5678",
-      "label": "Phone",
-      "japanese_label": "電話",
-      "description": "Available Monday-Friday, 9AM-6PM JST",
-      "japanese_description": "月曜日-金曜日、午前9時-午後6時（日本時間）",
+      "number": "+81 90-5521-9462",
+      "japanese_number": "+81 90-5521-9462",
+      "label": "WhatsApp",
+      "japanese_label": "WhatsApp",
+      "description": "Message me on WhatsApp for faster response",
+      "japanese_description": "WhatsAppでご連絡ください",
       "icon": "phone"
     },
     "location": {
