@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -19,6 +20,11 @@ import {
 } from 'lucide-react'
 
 const Projects: React.FC = () => {
+  useSEO({
+    title: 'Projects — FALCON Portfolio',
+    description: 'Portfolio projects showcasing web, mobile and cloud work by FALCON',
+    canonical: 'REPLACE_WITH_PRIMARY_URL/projects'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const data = loadPortfolioData()
@@ -76,11 +82,17 @@ const Projects: React.FC = () => {
                 onClick={() => openProjectModal(project)}
               >
                 <div className="aspect-video overflow-hidden">
-                  <img
-                    src={project.images[0]}
-                    alt={getLocalizedText(project, 'name', language)}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                  <picture>
+                    <source srcSet={project.images[0].replace('.png', '.avif')} type="image/avif" />
+                    <source srcSet={project.images[0].replace('.png', '.webp')} type="image/webp" />
+                    <img
+                      src={project.images[0]}
+                      alt={getLocalizedText(project, 'name', language)}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </picture>
                 </div>
 
                 <div className="p-6">
@@ -189,12 +201,18 @@ const Projects: React.FC = () => {
               className="glass rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-glow-ocean"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative">
-                <img
-                  src={selectedProject.images[0]}
-                  alt={getLocalizedText(selectedProject, 'name', language)}
-                  className="w-full h-64 object-cover rounded-t-2xl"
-                />
+                <div className="relative">
+                <picture>
+                  <source srcSet={selectedProject.images[0].replace('.png', '.avif')} type="image/avif" />
+                  <source srcSet={selectedProject.images[0].replace('.png', '.webp')} type="image/webp" />
+                  <img
+                    src={selectedProject.images[0]}
+                    alt={getLocalizedText(selectedProject, 'name', language)}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-64 object-cover rounded-t-2xl"
+                  />
+                </picture>
                 <button
                   onClick={closeProjectModal}
                   className="absolute top-4 right-4 w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors duration-200"

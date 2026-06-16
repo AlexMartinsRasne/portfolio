@@ -6,8 +6,22 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { loadPortfolioData, getLangBlockKey } from '../utils/dataLoader'
 import { useUIText } from '../i18n/ui'
 import { OceanBackground } from '../types/portfolio'
+import React, { useState, useEffect } from 'react'
+import { ChevronDown, ArrowRight } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { fadeUp } from '../utils/animations'
+import { useLanguage } from '../contexts/LanguageContext'
+import { loadPortfolioData, getLangBlockKey } from '../utils/dataLoader'
+import { useUIText } from '../i18n/ui'
+import { OceanBackground } from '../types/portfolio'
+import useSEO from '../hooks/useSEO'
 
 const Home: React.FC = () => {
+  useSEO({
+    title: 'FALCON — Software Engineer & Full-Stack Developer',
+    description: 'FALCON is a Tokyo-based software engineer specializing in React, TypeScript, and modern web applications',
+    canonical: 'REPLACE_WITH_PRIMARY_URL'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const [currentBackground, setCurrentBackground] = useState(0)

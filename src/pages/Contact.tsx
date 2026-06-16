@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import useSEO from '../hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -21,6 +22,11 @@ import {
 import toast from 'react-hot-toast'
 
 const Contact: React.FC = () => {
+  useSEO({
+    title: 'Contact — FALCON Portfolio',
+    description: 'Get in touch with FALCON for projects, collaborations, and consulting',
+    canonical: 'REPLACE_WITH_PRIMARY_URL/contact'
+  })
   const { language } = useLanguage()
   const t = useUIText(language)
   const data = loadPortfolioData()
