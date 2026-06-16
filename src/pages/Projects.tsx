@@ -21,8 +21,8 @@ import {
 
 const Projects: React.FC = () => {
   useSEO({
-    title: 'Portfolio Projects — FALCON | Web, Mobile & Cloud',
-    description: 'Showcase of full-stack projects by FALCON: React web apps, Node.js backends, microservices, and cloud-native solutions',
+    title: 'Portfolio Projects — FALCON | Full-Stack, AI & DevOps Case Studies',
+    description: 'Selected projects demonstrating full-stack engineering, AI integrations, and DevOps-driven deployments — React frontends, Node.js backends, microservices, and cloud infrastructure.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/projects'
   })
   const { language } = useLanguage()

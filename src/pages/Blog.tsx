@@ -8,8 +8,8 @@ import { Calendar, Clock, Eye, Heart, MessageCircle, ExternalLink, Tag } from 'l
 
 const Blog: React.FC = () => {
   useSEO({
-    title: 'Blog — FALCON | Web Development & Engineering Insights',
-    description: 'Articles and insights on React, TypeScript, Node.js, full-stack development, and best practices in modern web engineering',
+    title: 'Blog — FALCON | Full-Stack, AI & DevOps Engineering Insights',
+    description: 'Technical articles on full-stack development, AI integrations, and DevOps workflows — tutorials, architecture guides, and engineering lessons from FALCON.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/blog'
   })
   const { language } = useLanguage()

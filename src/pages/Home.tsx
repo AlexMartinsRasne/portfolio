@@ -10,8 +10,8 @@ import useSEO from '../hooks/useSEO'
 
 const Home: React.FC = () => {
   useSEO({
-    title: 'FALCON — Full-Stack Developer | React, TypeScript, Node.js',
-    description: 'FALCON — Full-stack software engineer in Tokyo specializing in React, TypeScript, Node.js, and modern web applications',
+    title: 'FALCON — Full-Stack, AI & DevOps Engineer | React, TypeScript, Node.js',
+    description: 'FALCON — Full-stack, AI and DevOps software engineer in Tokyo. Expertise in React, TypeScript, Node.js, cloud-native architectures, and machine learning integrations. Explore projects and deployments.',
     canonical: 'https://portfolio.falconxxx475.workers.dev'
   })
   const { language } = useLanguage()

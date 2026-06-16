@@ -9,8 +9,8 @@ import { X, Heart, Eye, MapPin, Calendar, Camera, Settings, ExternalLink } from 
 
 const Gallery: React.FC = () => {
   useSEO({
-    title: 'Gallery — FALCON | Photography & Visual Work',
-    description: 'Visual gallery showcasing photography, design work, and creative projects by FALCON',
+    title: 'Gallery — FALCON | Visuals & Project Media',
+    description: 'Gallery of visuals, screenshots, and media from full-stack, AI, and DevOps projects — demos and design assets by FALCON.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/gallery'
   })
   const { language } = useLanguage()

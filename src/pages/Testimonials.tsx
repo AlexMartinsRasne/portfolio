@@ -11,7 +11,7 @@ import { Star, Quote, ExternalLink, Calendar, MapPin } from 'lucide-react'
 const Testimonials: React.FC = () => {
   useSEO({
     title: 'Testimonials — FALCON | Client Reviews',
-    description: 'Client testimonials and reviews for FALCON\'s work in full-stack development, React engineering, and collaborative projects',
+    description: 'Client testimonials for FALCON\'s full-stack, AI, and DevOps work — case studies and feedback from collaborators and clients.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/testimonials'
   })
   const { language } = useLanguage()

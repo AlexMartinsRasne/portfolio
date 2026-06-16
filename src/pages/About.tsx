@@ -16,8 +16,8 @@ import {
 
 const About: React.FC = () => {
   useSEO({
-    title: 'About — FALCON | Full-Stack Software Engineer',
-    description: 'Learn about FALCON\'s background, expertise in React, TypeScript, Node.js, microservices architecture, and approach to building elegant software solutions',
+    title: 'About — FALCON | Full-Stack, AI & DevOps Engineer',
+    description: 'About FALCON — full-stack, AI and DevOps engineer with experience in React, TypeScript, Node.js, microservices, and cloud deployments. Read about technical background, methodology, and notable projects.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/about'
   })
   const { language } = useLanguage()

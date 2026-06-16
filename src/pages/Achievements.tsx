@@ -11,7 +11,7 @@ import { Award, Calendar, ExternalLink, Star } from 'lucide-react'
 const Achievements: React.FC = () => {
   useSEO({
     title: 'Achievements — FALCON | Awards & Certifications',
-    description: 'Achievements, awards, and certifications earned by FALCON in software engineering, cloud architecture, and full-stack development',
+    description: 'Achievements and certifications for FALCON in full-stack development, cloud architecture, AI projects, and DevOps practices.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/achievements'
   })
   const { language } = useLanguage()

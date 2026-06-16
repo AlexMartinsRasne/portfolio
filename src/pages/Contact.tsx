@@ -23,8 +23,8 @@ import toast from 'react-hot-toast'
 
 const Contact: React.FC = () => {
   useSEO({
-    title: 'Contact — Get in Touch with FALCON',
-    description: 'Contact FALCON for freelance projects, collaborations, consulting, and full-stack development opportunities',
+    title: 'Contact — Hire FALCON | Full-Stack, AI & DevOps',
+    description: 'Contact FALCON for full-stack, AI, and DevOps projects, consulting, or collaborations. Available for freelance and contract work in web and cloud engineering.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/contact'
   })
   const { language } = useLanguage()

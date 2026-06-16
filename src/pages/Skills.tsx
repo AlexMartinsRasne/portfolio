@@ -19,8 +19,8 @@ import {
 
 const Skills: React.FC = () => {
   useSEO({
-    title: 'Skills — FALCON | Technical Expertise',
-    description: 'Technical skills in React, TypeScript, Node.js, Python, cloud architecture, microservices, and modern web technologies',
+    title: 'Skills — FALCON | Full-Stack, AI & DevOps Expertise',
+    description: 'Technical skills include full-stack development (React, TypeScript, Node.js), AI/ML integrations, cloud architecture, containerization, and DevOps practices.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/skills'
   })
   const { language } = useLanguage()

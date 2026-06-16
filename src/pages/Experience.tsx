@@ -10,8 +10,8 @@ import { Calendar, MapPin, Award, TrendingUp } from 'lucide-react'
 
 const Experience: React.FC = () => {
   useSEO({
-    title: 'Experience — FALCON | Professional Work History',
-    description: 'Professional experience in full-stack development, React engineering, microservices, cloud architecture, and technical leadership',
+    title: 'Experience — FALCON | Full-Stack, AI & DevOps Experience',
+    description: 'Professional experience across full-stack engineering, AI projects, and DevOps-driven production deployments — React, Node.js, cloud-native systems, and microservices.',
     canonical: 'https://portfolio.falconxxx475.workers.dev/experience'
   })
   const { language } = useLanguage()
