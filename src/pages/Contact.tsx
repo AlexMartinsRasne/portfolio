@@ -44,23 +44,53 @@ const Contact: React.FC = () => {
     }))
   }
 
+  const contactEndpoint = 'https://formsubmit.co/falconxxx475@gmail.com'
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    toast.success(getLocalizedText(contactData.contact_form.submit_button, 'success_text', language))
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: '',
-      message: '',
-      budget: '',
-      timeline: ''
-    })
-    setIsSubmitting(false)
+
+    try {
+      const payload = new URLSearchParams()
+      payload.append('name', formData.name)
+      payload.append('email', formData.email)
+      payload.append('company', formData.company)
+      payload.append('subject', formData.subject)
+      payload.append('message', formData.message)
+      payload.append('budget', formData.budget)
+      payload.append('timeline', formData.timeline)
+      payload.append('_subject', 'Portfolio Contact Form')
+      payload.append('_captcha', 'false')
+
+      const response = await fetch(contactEndpoint, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+        },
+        body: payload,
+      })
+
+      if (!response.ok) {
+        const errorText = await response.text()
+        throw new Error(errorText || 'Failed to send message')
+      }
+
+      toast.success(getLocalizedText(contactData.contact_form.submit_button, 'success_text', language))
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: '',
+        budget: '',
+        timeline: ''
+      })
+    } catch (error) {
+      console.error('Contact form error:', error)
+      toast.error('Unable to send message. Please try again or contact via WhatsApp.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const socialIcons = {
