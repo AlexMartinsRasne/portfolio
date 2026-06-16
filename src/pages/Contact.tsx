@@ -15,7 +15,8 @@ import {
   Linkedin,
   Send,
   CheckCircle,
-  ChevronDown
+  ChevronDown,
+  MessageCircle
 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
@@ -324,6 +325,15 @@ const Contact: React.FC = () => {
                       <p className="text-sm text-gray-500">
                         {getLocalizedText(contactData.contact_info.phone, 'description', language)}
                       </p>
+                      <a
+                        href="https://api.whatsapp.com/send?phone=819055219462&text=Hello%20Falcon"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex mt-4 items-center gap-2 rounded-full border border-ocean-400 px-4 py-2 text-sm text-ocean-100 hover:bg-ocean-500/10 transition"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        Send WhatsApp
+                      </a>
                     </div>
                   </div>
 
